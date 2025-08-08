@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drug Risk Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="fade-in">
+    <video id="loading-video" autoplay muted playsinline>
+      <source src="videoplayback (online-video-cutter.com).mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Main Application -->
+  <div id="main-app">
+    <div class="sidebar">
+      <h2>Input Panel</h2>
+      <label>Sex:
+        <select id="sex">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </label>
+
+      <label>Age:
+        <input type="range" id="age" min="18" max="80" value="30" />
+        <span id="age-value">30</span> years
+      </label>
+
+      <label>Drug:
+        <select id="drug">
+          <option>Sertraline</option>
+          <option>Zolpidem</option>
+        </select>
+      </label>
+
+      <label>Dose:
+        <input type="range" id="dose" min="0" max="100" value="50" />
+        <span id="dose-value">50</span> mg
+      </label>
+    </div>
+
+    <div class="dashboard">
+      <h1>Risk Analysis Dashboard</h1>
+      <p id="risk-output">Enter values to analyze risk.</p>
+      <div id="chart-area"></div>
+      <p id="explanation"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
